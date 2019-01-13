@@ -8,8 +8,13 @@ class MetaSingleton(type):
             cls._instances[cls] = super(MetaSingleton, cls).__call__(*args, **kwargs)
         return cls._instances[cls]
 
-class Logger(metaclass=MetaSingleton):
-    pass
+## python 3
+# class Logger(metaclass=MetaSingleton):
+#     pass
+
+## python 2.7
+class Logger():
+	__metaclass__=MetaSingleton
 
 logger1 = Logger()
 logger2 = Logger()

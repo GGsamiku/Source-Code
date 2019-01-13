@@ -1,6 +1,11 @@
 __author__ = 'Chetan'
 
-class HealthCheck:
+
+## python 3
+# class HealthCheck():
+
+## python 2.7
+class HealthCheck(object):
     
     _instance = None
     def __new__(cls, *args, **kwargs):
